@@ -6,7 +6,7 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:06:39 by fbbot             #+#    #+#             */
-/*   Updated: 2023/11/28 12:18:24 by fbbot            ###   ########.fr       */
+/*   Updated: 2023/12/04 17:04:26 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,26 +34,30 @@ static int	check_base(char *base)
 	return (i);
 }
 
-static void	convert_putint(long nb, int length, char *base)
+static int	convert_nbr(unsigned long nb, int length, char *base)
 {
-	if (nb < 0)
+	int				printed;
+
+	printed = 0;
+	if (nb < (unsigned long)length)
 	{
-		write(1, "-", 1);
-	}
-	if (nb < (long)length)
 		write(1, &base[nb], 1);
+		return (++printed);
+	}
 	else
 	{
-		convert_putint(nb / length, length, base);
-		convert_putint(nb % length, length, base);
+		printed += convert_nbr(nb / length, length, base);
+		printed += convert_nbr(nb % length, length, base);
 	}
+	return (printed);
 }
 
-void	ft_putint_base(long nbr, char *base)
+int	ft_putnbr_base(unsigned long nbr, char *base)
 {
 	int	length;
 
 	length = check_base(base);
 	if (length > 1)
-		convert_putint(nbr, length, base);
+		return (convert_nbr(nbr, length, base));
+	return (0);
 }
