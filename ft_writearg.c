@@ -6,15 +6,15 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 10:43:18 by fbbot             #+#    #+#             */
-/*   Updated: 2023/12/04 17:28:42 by fbbot            ###   ########.fr       */
+/*   Updated: 2023/12/05 14:59:23 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_writearg(char specifier, va_list arglist)
+int	ft_writearg(char specifier, va_list arglist, int *index)
 {
-
+	(*index)++;
 	if (specifier == '%')
 		return (ft_putchar('%'));
 	else if (specifier == 'd' || specifier == 'i')

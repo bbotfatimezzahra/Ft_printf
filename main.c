@@ -6,8 +6,6 @@
 
 int	main()
 {
-	void *p = malloc(1);
-
-printf("%d\n",printf("%+                                                   +++++++++++++++++++++++++++++++++++++++++++ #d\n",23));
-printf("%d\n",ft_printf("%+d\n",23));
+printf("%d\n",printf("% # +x\n",79));
+printf("%d\n",ft_printf("% # +x\n",79));
 }

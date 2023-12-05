@@ -6,7 +6,7 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 10:49:08 by fbbot             #+#    #+#             */
-/*   Updated: 2023/12/04 18:09:07 by fbbot            ###   ########.fr       */
+/*   Updated: 2023/12/05 15:00:17 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,9 @@ int	ft_printf(const char *format, ...)
 		else
 		{
 			if (ft_strchr(SPECIFIERS, format[i + 1]))
-			{
-				printed += ft_writearg(format[++i], arglist);
-				i++;
-			}
+				printed += ft_writearg(format[++i], arglist, &i);
 			else if (ft_strchr(FLAGS, format[i + 1]))
-			{
 				printed += ft_writeflag(&format[++i], arglist, &i);
-				i++;
-			}
 		}
 	}
 	va_end(arglist);
