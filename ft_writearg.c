@@ -6,11 +6,11 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 10:43:18 by fbbot             #+#    #+#             */
-/*   Updated: 2023/12/05 14:59:23 by fbbot            ###   ########.fr       */
+/*   Updated: 2023/12/06 12:04:23 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_writearg(char specifier, va_list arglist, int *index)
 {

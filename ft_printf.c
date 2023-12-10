@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 10:49:08 by fbbot             #+#    #+#             */
-/*   Updated: 2023/12/05 15:00:17 by fbbot            ###   ########.fr       */
+/*   Created: 2023/12/06 14:36:48 by fbbot             #+#    #+#             */
+/*   Updated: 2023/12/06 17:35:01 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -48,8 +48,8 @@ int	ft_printf(const char *format, ...)
 		{
 			if (ft_strchr(SPECIFIERS, format[i + 1]))
 				printed += ft_writearg(format[++i], arglist, &i);
-			else if (ft_strchr(FLAGS, format[i + 1]))
-				printed += ft_writeflag(&format[++i], arglist, &i);
+			else if (ft_strchr(FLAGS, format[++i]))
+				printed += ft_writeflag(format, arglist, &i);
 		}
 	}
 	va_end(arglist);

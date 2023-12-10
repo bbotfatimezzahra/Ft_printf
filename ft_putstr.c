@@ -6,11 +6,11 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 14:12:49 by fbbot             #+#    #+#             */
-/*   Updated: 2023/12/03 15:18:09 by fbbot            ###   ########.fr       */
+/*   Updated: 2023/12/06 12:03:52 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_strlen(const char *str)
 {

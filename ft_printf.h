@@ -6,12 +6,12 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 10:32:58 by fbbot             #+#    #+#             */
-/*   Updated: 2023/12/05 18:49:46 by fbbot            ###   ########.fr       */
+/*   Updated: 2023/12/06 15:29:25 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -35,7 +35,7 @@ int		ft_putnbr_base(unsigned long nbr, char *base);
 int		ft_putpointer(void *p);
 int		ft_writeflag(const char *format, va_list arglist, int *index);
 int		ft_putsign(const char *format, va_list arglist, int *index, int flip);
-int		ft_putblank(const char *format, va_list arglist, int *index);
+int		ft_putblank(const char *format, va_list arglist, int *index, int flip);
 int		ft_putzero(const char *format, va_list arglist, int *index);
 
 #endif

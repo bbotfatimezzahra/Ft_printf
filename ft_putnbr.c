@@ -6,11 +6,11 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 15:31:22 by fbbot             #+#    #+#             */
-/*   Updated: 2023/12/03 16:21:38 by fbbot            ###   ########.fr       */
+/*   Updated: 2023/12/06 12:02:34 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(int nb)
 {
@@ -36,7 +36,7 @@ int	ft_putnbr(int nb)
 	else
 	{
 		length += ft_putnbr(unb / 10);
-		length +=ft_putnbr(unb % 10);
+		length += ft_putnbr(unb % 10);
 	}
 	return (length);
 }
@@ -56,7 +56,7 @@ int	ft_putunbr(unsigned int unb)
 	else
 	{
 		length += ft_putunbr(unb / 10);
-		length +=ft_putunbr(unb % 10);
+		length += ft_putunbr(unb % 10);
 	}
 	return (length);
 }
