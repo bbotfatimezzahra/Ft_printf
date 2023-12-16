@@ -6,7 +6,7 @@
 #    By: fbbot <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/28 10:42:22 by fbbot             #+#    #+#              #
-#    Updated: 2023/12/06 15:28:43 by fbbot            ###   ########.fr        #
+#    Updated: 2023/12/16 15:51:59 by fbbot            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJS := $(SRCS:%.c=%.o)
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar rc $(NAME) $(OBJS)
 
 bonus : $(NAME)
 
